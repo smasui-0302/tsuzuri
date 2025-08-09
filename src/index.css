@@ -11,3 +11,17 @@
   --font-serif: "Noto Serif JP", serif;
   --font-display: "Playfair Display", serif;
 }
+
+@layer base {
+  html, body, #root { height: 100%; }
+}
+
+@utility container { @apply max-w-4xl mx-auto px-4; }
+@utility header-bar { @apply bg-primary text-surface; }
+@utility brand { font-family: var(--font-display); }
+@utility btn { @apply inline-flex items-center gap-2 px-3 py-2 rounded; }
+@utility btn-primary { @apply bg-primary text-surface hover:opacity-90; }
+@utility btn-accent { @apply bg-accent text-surface hover:bg-primary; }
+@utility link { @apply underline underline-offset-2 decoration-1 hover:opacity-80; }
+@utility card { @apply bg-surface rounded-lg shadow p-4; }
+@utility muted { color: var(--color-muted); }
